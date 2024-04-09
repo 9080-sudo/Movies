@@ -1,0 +1,11 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+
+.upcoming {
+  background-color: #282b33;
+  min-height: 100vh;
+}

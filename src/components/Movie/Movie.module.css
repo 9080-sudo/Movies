@@ -1,0 +1,39 @@
+.movie-link {
+  width: 25%;
+  text-decoration: none;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .movie-link {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .movie-link {
+    width: 100%;
+  }
+}
+
+.image {
+  height: 300px;
+  width: 200px;
+}
+
+.name {
+  color: #fff;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.rating {
+  color: #fff;
+  margin-top: 8px;
+}

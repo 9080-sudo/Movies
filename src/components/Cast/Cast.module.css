@@ -1,0 +1,46 @@
+.cast {
+  width: 14%;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .cast {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .cast {
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .cast{
+        width: 28%;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .cast{
+        width: 20%;
+    }
+}
+.image {
+  height: 300px;
+  width: 180px;
+}
+
+.name {
+  color: #fff;
+  font-size: 19px;
+  margin-top: 5px;
+}
+
+.character {
+  color: #fff;
+  font-size: 13px;
+}
