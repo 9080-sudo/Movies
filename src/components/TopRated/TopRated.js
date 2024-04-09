@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Pagination from "../Pagination/Pagination";
 import { ThreeDots } from "react-loader-spinner";
 import classes from './TopRated.module.css'
-import TopRatedMovies from "../Movies/Movies";
 import Movies from "../Movies/Movies";
 
 const API_KEY = "1b4fe0b78782b44a3c425fc3d5c5a080";
@@ -41,7 +40,7 @@ export default function TopRated({ setSearch}) {
 
   useEffect(() => {
     setSearch('')
-  },[])
+  },[setSearch])
 
   const handlePageClick = (event) => {
     setPageOffset(event.selected + 1);

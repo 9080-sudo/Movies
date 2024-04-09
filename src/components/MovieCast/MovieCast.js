@@ -13,7 +13,6 @@ const apiStatusConstants = {
   failure: "FAILURE",
   inProgress: "IN_PROGRESS",
 };
-const BASE_IMAGE_PATH = "https://image.tmdb.org/t/p/w500";
 
 export default function MovieCast() {
   const params = useParams();

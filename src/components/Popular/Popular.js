@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Pagination from "../Pagination/Pagination";
 import { ThreeDots } from "react-loader-spinner";
 import classes from "./Popular.module.css";
@@ -11,21 +11,14 @@ const apiStatusConstants = {
   failure: "FAILURE",
   inProgress: "IN_PROGRESS",
 };
-export default function Popular({setSearch}) {
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
+export default function Popular({setSearch}) {  
   const [pageOffset, setPageOffset] = useState(1);
   const [popularMovies, setPopularMovies] = useState([]);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial);
-  // const pageCount = useRef(0);
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
   useEffect(() => {
     const fetchPopularMovies = async () => {
       setApiStatus(apiStatusConstants.inProgress);
-      // console.log(pageOffset)
       let pMovies = await fetch(
         `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${pageOffset}`
       );
@@ -62,25 +55,10 @@ export default function Popular({setSearch}) {
 
   useEffect(() => {
     setSearch('')
-  },[])
+  },[setSearch])
 
   return (
     <>
-      {/* <Items currentItems={currentItems} /> */}
-      {/* <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={4}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-        containerClassName={classes["pagination"]}
-        previousLinkClassName={classes["page-num"]}
-        pageLinkClassName={classes["page-num"]}
-        nextLinkClassName={classes["page-num"]}
-        activeLinkClassName={classes["active"]}
-      /> */}
       {apiStatus === apiStatusConstants.inProgress && (
         <div className={classes["loader"]}>
           <ThreeDots

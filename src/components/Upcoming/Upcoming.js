@@ -43,7 +43,7 @@ export default function Upcoming({setSearch}) {
 
   useEffect(() => {
     setSearch('')
-  },[])
+  },[setSearch])
 
   return (
     <>
